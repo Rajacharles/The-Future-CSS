@@ -1,0 +1,68 @@
+*{
+  margin: 0;
+  padding: 0;
+}
+
+body,
+html{
+  width: 100vw;
+  height: 100vh;
+}
+
+body{
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  font-family: "Open sans", sans-serif;
+}
+
+.bg{
+  background: url(travel.jpg);
+  background-size: cover;
+  position: fixed;
+  top: -20px;
+  left: -20px;
+  right: -20px;
+  bottom: -20px;
+  filter: blur(15px);
+  z-index: -1;
+}
+
+.slogan{
+  margin-top: 24px;
+  font-size: 36px;
+  font-weight: 400;
+  color: #fff;
+}
+
+.mask{
+  width: 370px;
+  height: 196px;
+  -webkit-animation: move 20s infinite;
+          animation: move 20s infinite;
+  background-image: url(travel.jpg);
+  background-size: cover;
+  -webkit-mask: url(Raja.svg);
+          mask: url(Raja.svg);
+  -webkit-mask-size: cover;
+          mask-size: cover;                  
+}
+
+@-webkit-keyframes move{
+  0%{
+    background-position: 0 0;
+  }
+  50%{
+    background-position: 100% 0;
+  }
+}
+
+@keyframes move{
+  0%{
+    background-position: 0 0;
+  }
+  50%{
+    background-position: 100% 0;
+  }
+}
